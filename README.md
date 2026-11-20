@@ -134,15 +134,3 @@ Latest training run selected **Logistic Regression** (~98.3% test accuracy). Re-
 `train_model.py` any time to retrain and re-evaluate.
 
 ---
-
-## Notes for Viva / Evaluation
-
-- The dataset is generated programmatically (`dataset/generate_dataset.py`) with realistic
-  symptom variability (dropped/noise symptoms) so the classification problem isn't trivial —
-  this can be explained transparently rather than citing an opaque external source.
-- Model comparison is genuine: `train_model.py` trains all three algorithms and picks the
-  winner by test accuracy — nothing is hardcoded.
-- `utils/disease_info.py` is decoupled from `app.py` to keep prediction logic and medical
-  content separately maintainable (separation of concerns).
-- No hospital database or external API is required — the "Find Nearby Hospital" button
-  builds a Google Maps search URL dynamically from the recommended specialist.
